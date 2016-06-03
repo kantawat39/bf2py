@@ -48,7 +48,7 @@ class UnlockSet: pass
 
 def onPlayerConnect(player):
 
-	defaultUnlocks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	defaultUnlocks = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 	host.pers_plrSetUnlocks(player.index, defaultUnlocks, defaultUnlocks)
 
 	if not player.isAIPlayer():
@@ -89,7 +89,7 @@ def onUnlocksResponse(succeeded, player, unlocks):
 	# print "Unlocks received for player ", player.getName(), "(",player.index, ") : ", unlocks
 	
 	# translate gamespy item vector into a kit-based unlock vector handled by game
-	kitUnlocks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	kitUnlocks = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 	for item in unlocks:
 		if item in unlockItemMap:
 			kitUnlocks[unlockItemMap[item]] = 1
